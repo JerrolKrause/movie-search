@@ -26,15 +26,14 @@ window.msApp = (function () {
                 method      : 'GET',
                 url         : 'http://api.themoviedb.org/3/search/movie?api_key=42b3e60b6636f50062f6d3579100d83f&query=' + encodeURIComponent($scope.searchTerm)
             }).then(function ($response) {
-                //If no results found
+                //If no results found, show no results div
                 if($response.data.total_results === 0){
                     $scope.noresults    = true;
                     $scope.movies       = {};
-                //Otherwise show results    
+                //Otherwise output results
                 } else {
                     $scope.noresults    = false;
                     $scope.movies       = $response.data.results;
-                    
                 }
             });
         };
@@ -42,8 +41,8 @@ window.msApp = (function () {
         /**
          * Checks is this movie has a poster. If so set it as an inline style.
          * If not do nothing which defaults to the no poster graphic set in the css
-         * @param {type} value
-         * @returns {Boolean|msapp_L17.$scope.getBG.msappAnonym$2}
+         * @param {type} value  - Will either be a string or null sent by the API
+         * @returns {Boolean}   - Return false if value is null, otherwise return a string of the HTTP link to the image
          */
         $scope.getBG = function(value){
             //Check if poster value is undefined or null
