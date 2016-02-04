@@ -1,0 +1,12 @@
+/*     
+    Document   : Global StyleSheet
+    Author     : Jerrol Krause
+    Description:
+        Master global stylesheet
+
+@import '_variables.scss';
+@import '_mixins.scss';
+@import '_placeholders.scss';
+*/
+@import 'css/bootstrap.min.css';
+@import 'css/ms.css';

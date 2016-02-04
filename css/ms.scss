@@ -1,0 +1,102 @@
+/*
+ * Variables
+ */
+$green-lt   :       #5a7825;
+$green-dk   :       #49611e;
+$gray-lt    :       #404040;
+$gray-dk    :       #1e1e1e;
+
+$link-color:        $green-dk;
+$link-color-hover:  $green-dk ;
+
+
+/*
+ * Content
+ */
+/* Generic HTML */
+@font-face{font-family:'BPreplay';src:url(../fonts/BPreplay.otf);}
+
+body{background-color:#fff;}
+h1, h2, h3, h4, h5{color:$green-dk;font-family: "BPreplay", sans-serif;position:relative;}
+a, a:link{color:$link-color;}
+a:hover{color:$link-color-hover;text-decoration:underline;}
+*:focus {outline: none;}
+label{color:$link-color;cursor:pointer;margin-right:0px!important;font-weight:normal;margin-left:10px;}
+    label:hover{color:$link-color-hover;text-decoration:underline;}
+input[type="checkbox"]{cursor:pointer;border-color:$link-color;position: relative;top: 2px;}
+    input.date{display:inline-block;width: 150px;border-radius:5px 0px 0px 5px;}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {display: none !important;}
+table{
+    border: 1px solid #DDD;width:100%;margin-bottom: 1.25rem;
+    th{padding: 5px;font-size: 14px;}
+    tr.alt, tr.even, tr:nth-of-type(2n){background: #F9F9F9 none repeat scroll 0% 0%;}
+    td{padding: 5px;font-size: 12px;}
+    &.quiet{
+        padding:0px;margin:0px;border:0px;
+        td, td{ padding:0px;margin:0px;border:0px;}
+    }
+};
+
+/* 
+* Layout 
+*/
+
+/* Header */
+#ms-header{height:130px;margin-bottom: 0px;border-radius: 0px;padding-top:30px;
+           background: linear-gradient($gray-lt,$gray-dk);background: -webkit-linear-gradient($gray-lt,$gray-dk);background: -o-linear-gradient($gray-lt,$gray-dk);background: -moz-linear-gradient($gray-lt,$gray-dk);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$gray-lt',endColorstr='$gray-dk');
+           #logo{display:block;max-width:285px;height:63px;overflow:hidden;text-indent:-9999px;background: url('../img/logo.png') no-repeat center center;background-size:contain;}
+}
+
+/* Search Tool */
+#ms-search{
+    text-align:center;padding:10px 30px;
+    background: linear-gradient($green-lt ,$green-dk);background: -webkit-linear-gradient($green-lt ,$green-dk);background: -o-linear-gradient($green-lt ,$green-dk);background: -moz-linear-gradient($green-lt ,$green-dk);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$green-lt ',endColorstr='$green-dk');
+    #search {background: #e3e3e3 url('../img/magnifying-glass.png') no-repeat 12px center;width:100%;max-width: 640px;height: 46px;padding: 0 14px 0 46px;border-radius: 24px;font-size: 1.3em;display:block;margin-left:auto;margin-right:auto;}
+}
+
+/* Main Content */
+#ms-content{
+    padding-left:10px;padding-top:20px;
+    .ms-content-tile{
+        padding:10px;margin-right:10px;margin-bottom:20px;box-shadow: 10px 10px 10px rgba(0,0,0,0.5);height:310px;overflow:hidden;
+        h2{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;text-align: center;}
+        .img{
+            max-width:150px;height:225px;margin-left:auto;margin-right:auto;position:relative;background-image: url('../img/no-poster.jpg');background-size:cover;background-position:center center;border: 1px solid #ddd;
+            .info{position:absolute;top:0px;left:0px;right:0px;bottom:0px;background-color:rgba(0, 0, 0, 0.8);color:#fff;padding:10px;opacity:0;-webkit-transition: all 1s ease;-moz-transition: all 0.5s ease;-ms-transition: all 0.5s ease;-o-transition: all 0.5s ease;transition: all 0.5s ease;}
+            &:hover .info{opacity:1.0;-webkit-transition: all 1s ease;-moz-transition: all 0.5s ease;-ms-transition: all 0.5s ease;-o-transition: all 0.5s ease;transition: all 0.5s ease;}
+        }
+    }
+}
+
+/* Animation Classes */
+.repeat-animation.ng-enter-stagger, .repeat-animation.ng-leave-stagger, n.repeat-animation.ng-move-stagger {-webkit-transition-delay:0.1s;transition-delay:0.1s;}
+.repeat-animation.ng-enter, .repeat-animation.ng-leave, .repeat-animation.ng-move {-webkit-transition:0.1s linear all;transition:0.1s linear all;}
+.repeat-animation.ng-leave.ng-leave-active, .repeat-animation.ng-enter, .repeat-animation.ng-move {-webkit-transition:0.1s linear all;transition:0.1s linear all;opacity:0;}
+.repeat-animation.ng-leave, .repeat-animation.ng-move.ng-move-active, .repeat-animation.ng-enter.ng-enter-active {opacity:1;}
+
+
+/*
+ * Custom Media Queries
+ */
+/* XS Small devices (cell phones) */
+@media (max-width: 767px) {
+    #ms-search{
+        padding: 10px 20px;
+        #search{font-size:12px;}
+    } 
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}

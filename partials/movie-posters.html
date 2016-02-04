@@ -1,0 +1,15 @@
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 repeat-animation" ng-repeat="movie in data track by $index">
+    <div class="ms-content-tile thumbnail">
+        <div class="img"  ng-style="getBG(movie.poster_path)">
+            <div class="info">
+                <p><strong>Release Date:</strong><br/>
+                    {{movie.release_date | date:'MM/dd/yyyy'}}
+                </p>
+                <p><strong>User Rating:</strong><br/>
+                    {{movie.vote_average}}
+                </p>
+            </div>
+        </div>
+        <h2><a href="https://www.themoviedb.org/movie/{{movie.id}}" title="{{movie.original_title}}">{{movie.original_title}}</a></h2>
+    </div>
+</div>     
